@@ -36,7 +36,7 @@ class User(AbstractBaseUser):
     # date_joined = models.DateTimeField(default=timezone.now)
     # profile_photo = models.ImageField('Аватар', null=True, blank=True, upload_to='profile_images/')
     address = models.CharField(max_length=200, null=True, default='')
-    # objects = UserManager()
+    objects = UserManager()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
